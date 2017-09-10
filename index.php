@@ -10,6 +10,9 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
+        
+        tem alguma coisa aqui!!!
+        
         <?php
         // put your code here
         ?>

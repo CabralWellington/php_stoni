@@ -26,7 +26,7 @@ and open the template in the editor.
         <!-- Finalizando a pagina -->
             
         <?php
-        include("pagina/cabecalho.php")
+        include("pagina/rodape.php")
         ?>
     </body>
 </html>

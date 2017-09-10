@@ -10,9 +10,23 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
+        <!-- Inicializando -->
+        
         <?php
         include("pagina/cabecalho.php")
         ?>
 
+        
+        
+        
+        
+        
+        
+        
+        <!-- Finalizando a pagina -->
+            
+        <?php
+        include("pagina/cabecalho.php")
+        ?>
     </body>
 </html>

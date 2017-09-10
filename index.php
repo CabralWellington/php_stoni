@@ -12,9 +12,9 @@ and open the template in the editor.
     <body>
         
         tem alguma coisa aqui!!!
-        
         <?php
-        // put your code here
-        ?>
+phpinfo();
+?>
+
     </body>
 </html>

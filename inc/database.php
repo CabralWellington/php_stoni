@@ -1,6 +1,6 @@
 
 <?php
-mysql_report(MYSQLI_REPORT_STRICT);
+mysqli_report(MYSQLI_REPORT_STRICT);
 
 function open_database() {
     try {

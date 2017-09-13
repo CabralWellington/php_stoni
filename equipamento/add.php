@@ -1,6 +1,6 @@
 <?php 
   require_once('functions.php'); 
-  add();
+  addEquipamento();
 ?>
 
 <?php include(HEADER_TEMPLATE); ?>

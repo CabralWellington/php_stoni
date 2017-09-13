@@ -3,7 +3,7 @@
 
 	<hr>
 	<footer class="container">
-		<p>&copy;2016 - Web Dev Academy</p>
+		<p>&copy; DOZ | Tecnologia - 2017 </p>
 	</footer>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

@@ -19,14 +19,14 @@ if (!defined('ABSPATH')) {
 
 /** caminho no server para o sistema * */
 if (!defined('BASEURL')) {
-    define('BASEURL', '/');
+    define('BASEURL', '/php_stoni/');
 }
 
 /** caminho do arquivo de banco de dados * */
 if (!defined('DBAPI')) {
-    define('DBAPI', ABSPATH . 'inc/database.php');
+    define('DBAPI', ABSPATH . 'database.php');
 }
 
 /** caminhos dos templates de header e footer **/
-define('HEADER_TEMPLATE', ABSPATH . 'inc/header.php');
-define('FOOTER_TEMPLATE', ABSPATH . 'inc/footer.php');
+define('HEADER_TEMPLATE', ABSPATH . 'header.php');
+define('FOOTER_TEMPLATE', ABSPATH . 'footer.php');

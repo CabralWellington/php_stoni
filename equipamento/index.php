@@ -1,6 +1,6 @@
 <?php
-    require_once('functions.php');
-    index();
+    require_once('./functions.php');
+    indexEquipamento();
 ?>
 
 <?php include(HEADER_TEMPLATE); ?>
@@ -37,16 +37,16 @@
 	</tr>
 </thead>
 <tbody>
-<?php if ($customers) : ?>
-<?php foreach ($customers as $customer) : ?>
+<?php if ($Equipamentos) : ?>
+<?php foreach ($Equipamentos as $Equipamento) : ?>
 	<tr>
-		<td><?php echo $customer['ID_Equipamento']; ?></td>
-		<td><?php echo $customer['Nome_Equipamento']; ?></td>
-		<td><?php echo $customer['Marca_Equipamento']; ?></td>
+		<td><?php echo $Equipamento['ID_Equipamento']; ?></td>
+		<td><?php echo $Equipamento['Nome_Equipamento']; ?></td>
+		<td><?php echo $Equipamento['Marca_Equipamento']; ?></td>
 		<td class="actions text-left">
-			<a href="view.php?id=<?php echo $customer['ID_Equipamento']; ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Visualizar</a>
-			<a href="edit.php?id=<?php echo $customer['ID_Equipamento']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>
-			<a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-customer="<?php echo $customer['id']; ?>">
+			<a href="view.php?ID_Equipamento=<?php echo $Equipamento['ID_Equipamento']; ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Visualizar</a>
+			<a href="edit.php?ID_Equipamento=<?php echo $Equipamento['ID_Equipamento']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>
+			<a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-customer="<?php echo $Equipamento['id']; ?>">
 				<i class="fa fa-trash"></i> Excluir
 			</a>
 		</td>
@@ -61,10 +61,3 @@
 </table>
 
 <?php include(FOOTER_TEMPLATE); ?><?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-

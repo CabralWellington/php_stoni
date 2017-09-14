@@ -5,8 +5,8 @@ editEquipamento2();
 
 <?php include(HEADER_TEMPLATE); ?>
 
-<h2>Atualizar Cliente</h2>
-<h2>Nome do Equipamento <?php echo $Equipamento['Nome_Equipamento']; ?></h2>
+
+<h2>Nome do equipamento: <?php echo $Equipamento['Nome_Equipamento']; ?></h2>
 <hr>
 
 <?php if (!empty($_SESSION['message'])) : ?>

@@ -120,37 +120,19 @@ function editEquipamento2() {
     }
 }
 
+function deleteEquipamento($id = null) {
 
-function delEquipamento() {
-    $idequipamento = null;
-    $now = date_create('now', new DateTimeZone('America/Sao_Paulo'));
-    
-    if (isset($_GET['ID_Equipamento'])) {
+  global $Equipament;
+  $Equipamento = remove('Equipamento', $id);
 
-        $idequipamento = $_GET['ID_Equipamento'];
-        //header('location: index.php?tea='.$id);
-
-        if (isset($_POST['Equipamento'])) {
-
-            $Parametros = $_POST['Equipamento'];
-            $Parametro = "update equipamento set ";
-            foreach ($Parametros as $key => $value) {
-                $Parametro .= trim($key, "'");
-                $Parametro .= " = ";
-                $Parametro .= "'$value',";
-            }
-            $Parametro = rtrim($Parametro,",");
-            $Parametro .= "where ID_Equipamento = ".$idequipamento;
-            
-            updateORdelete($Parametro);
-            header('location: index.php?aa=' . $Parametro);
-        } else {
-            
-            global $Equipamento;
-            $Equipamento = findEquipamento('equipamento', $idequipamento);
-        }
-    } else {
-        header('location: index.php?asdasd=adad');
-    }
+  header('location: index.php');
 }
 
+function removeEquipamento($id = null ) {
+
+    if ($id) {
+      $sql = "DELETE FROM equipamento WHERE ID_Equipamento = " .$id;
+      updateORdelete($sql);
+      header('location: index.php?aa='.$sql);
+}
+}

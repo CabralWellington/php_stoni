@@ -121,7 +121,7 @@ function editEquipamento2() {
 }
 
 
-function editEquipamento3() {
+function delEquipamento() {
     $idequipamento = null;
     $now = date_create('now', new DateTimeZone('America/Sao_Paulo'));
     
@@ -145,6 +145,7 @@ function editEquipamento3() {
             updateORdelete($Parametro);
             header('location: index.php?aa=' . $Parametro);
         } else {
+            
             global $Equipamento;
             $Equipamento = findEquipamento('equipamento', $idequipamento);
         }
@@ -152,9 +153,4 @@ function editEquipamento3() {
         header('location: index.php?asdasd=adad');
     }
 }
-function delEquipamento(){
-    $id = $_GET['ID_Equipamento'];
-    $sql = "delete from equipamento where ID_Equipamento = " . id;
-    updateORdelete($sql);
-    header('location: index.php');
-}
+

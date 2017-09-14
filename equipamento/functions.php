@@ -111,6 +111,7 @@ function editEquipamento2() {
             updateORdelete($Parametro);
             header('location: index.php?aa=' . $Parametro);
         } else {
+            
             global $Equipamento;
             $Equipamento = findEquipamento('equipamento', $idequipamento);
         }

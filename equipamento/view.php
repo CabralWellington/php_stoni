@@ -1,6 +1,6 @@
 <?php
 require_once('../equipamento/functions.php');
-editEquipamento3();
+editEquipamento2();
 ?>
 
 <?php include(HEADER_TEMPLATE); ?>
@@ -14,31 +14,39 @@ editEquipamento3();
 <?php endif; ?>
 
 <dl class="dl-horizontal">
-    <dt>Nome:</dt>
-	<dd><?php echo $Equipamento['Nome_Equipamento']; ?></dd>
+        <dt>Nome:</dt>
+        <dd><?php echo $Equipamento['Nome_Equipamento']; ?></dd>
 
 	<dt>Marca:</dt>
 	<dd><?php echo $Equipamento['Marca_Equipamento']; ?></dd>
 
         
-	<dt>OID Job_Name:</dt>
+	<dt>OID Job Name:</dt>
 	<dd><?php echo $Equipamento['Job_Name_Equipamento']; ?></dd>
 
         
-	<dt>OID Job_Number:</dt>
+	<dt>OID Job Number:</dt>
 	<dd><?php echo $Equipamento['Job_Number_Equipamento']; ?></dd>
 
         
-	<dt>Marca do equipamento:</dt>
+	<dt>OID Job Username:</dt>
 	<dd><?php echo $Equipamento['Job_Username_Equipmaneto']; ?></dd>
 
         
-	<dt>Marca do equipamento:</dt>
-	<dd><?php echo $Equipamento['Marca_Equipamento']; ?></dd>
+	<dt>OID Job Type:</dt>
+	<dd><?php echo $Equipamento['Job_Type_Equipamento']; ?></dd>
 
         
-	<dt>Marca do equipamento:</dt>
-	<dd><?php echo $Equipamento['Marca_Equipamento']; ?></dd>
+	<dt>OID Job Pagecount:</dt>
+	<dd><?php echo $Equipamento['Job_Pagecount_Equipamento']; ?></dd>
+
+        
+	<dt>OID Job List Count:</dt>
+	<dd><?php echo $Equipamento['Job_List_Count_Equipamento']; ?></dd>
+
+        
+	<dt>OID Job date:</dt>
+	<dd><?php echo $Equipamento['Job_date_equipamento']; ?></dd>
 
 </dl>
 

@@ -46,7 +46,7 @@
 		<td class="actions text-left">
 			<a href="view.php?ID_Equipamento=<?php echo $Equipamento['ID_Equipamento']; ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Visualizar</a>
 			<a href="edit.php?ID_Equipamento=<?php echo $Equipamento['ID_Equipamento']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>
-			<a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-customer="<?php echo $Equipamento['id']; ?>">
+                        <a href="" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-customer="<?php echo $Equipamento['id']; ?>">
 				<i class="fa fa-trash"></i> Excluir
 			</a>
 		</td>

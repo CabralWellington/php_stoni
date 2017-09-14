@@ -10,7 +10,7 @@ define('DB_USER', 'root');
 define('DB_PASSWORD', 'wellington');
 
 /** nome do host do MySQL */
-define('DB_HOST', '104.198.240.105');
+define('DB_HOST', '127.0.0.1');
 
 /** caminho absoluto para a pasta do sistema * */
 if (!defined('ABSPATH')) {
@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
 
 /** caminho no server para o sistema * */
 if (!defined('BASEURL')) {
-    define('BASEURL', '/php_stoni/');
+    define('BASEURL', '/');
 }
 
 /** caminho do arquivo de banco de dados * */

@@ -10,7 +10,7 @@ define('DB_USER', 'root');
 define('DB_PASSWORD', 'wellington');
 
 /** nome do host do MySQL */
-define('DB_HOST', '127.0.0.1');
+define('DB_HOST', '104.198.240.105');
 
 /** caminho absoluto para a pasta do sistema * */
 if (!defined('ABSPATH')) {

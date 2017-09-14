@@ -23,7 +23,7 @@ function findEquipamento($table = null, $id = null) {
     $found = null;
     try {
         if ($id) {
-            $sql = "SELECT * FROM " . $table . " WHERE ID_Equipamento = " . $id;
+            $sql = "SELECT * FROM " . $table . " WHERE ID_".$table." = " . $id;
             $result = $database->query($sql);
 
             if ($result->num_rows > 0) {
@@ -47,16 +47,11 @@ function findEquipamento($table = null, $id = null) {
     return $found;
 }
 
-function addEquipamento() {
-
+function addEquipamento(){
     if (!empty($_POST['Equipamento'])) {
-
-//$today = date_create('now', new DateTimeZone('America/Sao_Paulo'));
-
-        $customer = $_POST['customer'];
-//$customer['modified'] = $customer['created'] = $today->format("Y-m-d H:i:s");
-
-        save('equipamento', $customer);
+        $table = $_POST["table"];
+        $Equipamentos = $_POST['Equipamento'];
+        save($table, $Equipamentos);
         header('location: index.php');
     }
 }
@@ -94,15 +89,12 @@ function editEquipamento() {
 
 function editEquipamento2() {
     $idequipamento = null;
-    $Nome_Equipamento = null;
-    $Marca_Equipamento = null;
     $now = date_create('now', new DateTimeZone('America/Sao_Paulo'));
-
+    
     if (isset($_GET['ID_Equipamento'])) {
 
         $idequipamento = $_GET['ID_Equipamento'];
         //header('location: index.php?tea='.$id);
-
 
         if (isset($_POST['Equipamento'])) {
 
@@ -116,7 +108,7 @@ function editEquipamento2() {
             $Parametro = rtrim($Parametro,",");
             $Parametro .= "where ID_Equipamento = ".$idequipamento;
             
-            updateEquipamento($Parametro);
+            updateORdelete($Parametro);
             header('location: index.php?aa=' . $Parametro);
         } else {
             global $Equipamento;
@@ -127,54 +119,41 @@ function editEquipamento2() {
     }
 }
 
-function updateEquipamento($query = null) {
 
-    $database = open_database();
+function editEquipamento3() {
+    $idequipamento = null;
+    $now = date_create('now', new DateTimeZone('America/Sao_Paulo'));
+    
+    if (isset($_GET['ID_Equipamento'])) {
 
-    try {
-        $database->query($query);
+        $idequipamento = $_GET['ID_Equipamento'];
+        //header('location: index.php?tea='.$id);
 
-        $_SESSION['message'] = 'Registro atualizado com sucesso.';
-        $_SESSION['type'] = 'success';
-    } catch (Exception $e) {
+        if (isset($_POST['Equipamento'])) {
 
-        $_SESSION['message'] = 'Nao foi possivel realizar a operacao.';
-        $_SESSION['type'] = 'danger';
+            $Parametros = $_POST['Equipamento'];
+            $Parametro = "update equipamento set ";
+            foreach ($Parametros as $key => $value) {
+                $Parametro .= trim($key, "'");
+                $Parametro .= " = ";
+                $Parametro .= "'$value',";
+            }
+            $Parametro = rtrim($Parametro,",");
+            $Parametro .= "where ID_Equipamento = ".$idequipamento;
+            
+            updateORdelete($Parametro);
+            header('location: index.php?aa=' . $Parametro);
+        } else {
+            global $Equipamento;
+            $Equipamento = findEquipamento('equipamento', $idequipamento);
+        }
+    } else {
+        header('location: index.php?asdasd=adad');
     }
-
-    close_database($database);
 }
-
-function saveEquipamento($table = null, $data = null) {
-
-    $database = open_database();
-
-    $columns = null;
-    $values = null;
-
-    //print_r($data);
-
-    foreach ($data as $key => $value) {
-        $columns .= trim($key, "'") . ",";
-        $values .= "'$value',";
-    }
-
-    // remove a ultima virgula
-    $columns = rtrim($columns, ',');
-    $values = rtrim($values, ',');
-
-    $sql = "INSERT INTO " . $table . "($columns)" . " VALUES " . "($values);";
-    header('location: index.php?teste=' . $sql);
-    try {
-        $database->query($sql);
-
-        $_SESSION['message'] = 'Registro cadastrado com sucesso.';
-        $_SESSION['type'] = 'success';
-    } catch (Exception $e) {
-
-        $_SESSION['message'] = 'Nao foi possivel realizar a operacao.';
-        $_SESSION['type'] = 'danger';
-    }
-
-    close_database($database);
+function delEquipamento(){
+    $id = $_GET['ID_Equipamento'];
+    $sql = "delete from equipamento where ID_Equipamento = " . id;
+    updateORdelete($sql);
+    header('location: index.php');
 }

@@ -1,6 +1,6 @@
 <?php
-    require_once('functions.php');
-    indexEquipamento();
+    require_once('./functions.php');
+    indexIdentidade();
 ?>
 
 <?php include(HEADER_TEMPLATE); ?>
@@ -8,7 +8,7 @@
 <header>
 	<div class="row">
 		<div class="col-sm-6">
-			<h2>Equipamentos</h2>
+			<h2>Identidades</h2>
 		</div>
 		<div class="col-sm-6 text-right h2">
 	    	<a class="btn btn-primary" href="add.php"><i class="fa fa-plus"></i> Novo Cliente</a>
@@ -37,16 +37,16 @@
 	</tr>
 </thead>
 <tbody>
-<?php if ($Equipamentos) : ?>
-<?php foreach ($Equipamentos as $Equipamento) : ?>
+<?php if ($Identidades) : ?>
+<?php foreach ($Identidades as $Identidade) : ?>
 	<tr>
-		<td><?php echo $Equipamento['ID_Equipamento']; ?></td>
-		<td><?php echo $Equipamento['Nome_Equipamento']; ?></td>
-		<td><?php echo $Equipamento['Marca_Equipamento']; ?></td>
+		<td><?php echo $Identidade['ID_Identidade']; ?></td>
+		<td><?php echo $Identidade['Nome_Identidade']; ?></td>
+		<td><?php echo $Identidade['Marca_Identidade']; ?></td>
 		<td class="actions text-left">
-			<a href="view.php?ID_Equipamento=<?php echo $Equipamento['ID_Equipamento']; ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Visualizar</a>
-			<a href="edit.php?ID_Equipamento=<?php echo $Equipamento['ID_Equipamento']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>
-                        <a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-customer="<?php echo $Equipamento['ID_Equipamento']; ?>">
+			<a href="view.php?ID_Identidade=<?php echo $Identidade['ID_Identidade']; ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Visualizar</a>
+			<a href="edit.php?ID_Identidade=<?php echo $Identidade['ID_Identidade']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>
+                        <a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-customer="<?php echo $Identidade['ID_Identidade']; ?>">
 				<i class="fa fa-trash"></i> Excluir
 			</a>
 		</td>

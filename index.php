@@ -4,43 +4,70 @@
 <?php include(HEADER_TEMPLATE); ?>
 <?php $db = open_database(); ?>
 
-<h1>Dashboard</h1>
+<h4>Stoni - Sistema de Outsourcing de Impressão</h4>
 <hr />
 
 <?php if ($db) : ?>
 
-<div class="row">
-	<div class="col-xs-6 col-sm-3 col-md-2">
-            <a href="equipamento/add.php" class="btn btn-primary">
-			<div class="row">
-				<div class="col-xs-12 text-center">
-					<i class="fa fa-plus fa-5x"></i>
-				</div>
-				<div class="col-xs-12 text-center">
-					<p>Novo Equipamento</p>
-				</div>
-			</div>
-		</a>
-	</div>
-
-	<div class="col-xs-6 col-sm-3 col-md-2">
+    <div class="row">
+        <div class="col-xs-6 col-sm-3 col-md-2">
             <a href="equipamento/" class="btn btn-default">
-			<div class="row">
-				<div class="col-xs-12 text-center">
-					<i class="fa fa-user fa-5x"></i>
-				</div>
-				<div class="col-xs-12 text-center">
-					<p>Equipamento</p>
-				</div>
-			</div>
-		</a>
-	</div>
-</div>
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <i class="fa fa-file-code-o fa-5x"></i>
+                    </div>
+                    <div class="col-xs-12 text-center">
+                        <p>Equipamento suportado</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+            <a href="identidade/" class="btn btn-default">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <i class="fa fa-user-plus fa-5x"></i>
+                    </div>
+                    <div class="col-xs-12 text-center">
+                        <p>Identidate</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+            <a href="equipamento/" class="btn btn-default">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <i class="fa fa-print fa-5x"></i>
+                    </div>
+                    <div class="col-xs-12 text-center">
+                        <p>Impressora</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-xs-6 col-sm-3 col-md-2">
+            <a href="equipamento/" class="btn btn-default">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <i class="fa fa-file-pdf-o fa-5x"></i>
+                    </div>
+                    <div class="col-xs-12 text-center">
+                        <p>Relatórios</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+
+    </div>
 
 <?php else : ?>
-	<div class="alert alert-danger" role="alert">
-		<p><strong>ERRO:</strong> Não foi possível Conectar ao Banco de Dados!</p>
-	</div>
+    <div class="alert alert-danger" role="alert">
+        <p><strong>ERRO:</strong> Não foi possível Conectar ao Banco de Dados!</p>
+    </div>
 
 <?php endif; ?>
 

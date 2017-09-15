@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
 
 /** caminho no server para o sistema * */
 if (!defined('BASEURL')) {
-    define('BASEURL', '/');
+    define('BASEURL', '/php_stoni/');
 }
 
 /** caminho do arquivo de banco de dados * */

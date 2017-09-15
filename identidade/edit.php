@@ -1,11 +1,11 @@
 <?php
 require_once('functions.php');
-editEquipamento2();
+editIdentidade2();
 ?>
 
 <?php include(HEADER_TEMPLATE); ?>
 
-<h2>Atualizar Equipamento</h2>
+<h2>Atualizar Identidade</h2>
 <?php if (!empty($_SESSION['message'])) : ?>
 	<div class="alert alert-<?php echo $_SESSION['type']; ?> alert-dismissible" role="alert">
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -14,16 +14,16 @@ editEquipamento2();
 	<?php clear_messages(); ?>
 <?php endif; ?>
 
-<form action="edit.php?ID_Equipamento=<?php echo $Equipamento['ID_Equipamento']; ?>" method="POST">
+<form action="edit.php?ID_Identidade=<?php echo $Identidade['ID_Identidade']; ?>" method="POST">
     <div class="row">
         <div class="form-group col-md-3">
             <label for="name">Nome / Razão Social</label>
-            <input type="text" class="form-control" name="Equipamento['Nome_Equipamento']" value="<?php echo $Equipamento['Nome_Equipamento']; ?>">
+            <input type="text" class="form-control" name="Identidade['Nome_Identidade']" value="<?php echo $Identidade['Nome_Identidade']; ?>">
         </div>
 
         <div class="form-group col-md-3">
             <label for="name2">Nome / Razão Social</label>
-            <input type="text" class="form-control" name="Equipamento['Marca_Equipamento']" value="<?php echo $Equipamento['Marca_Equipamento']; ?>">
+            <input type="text" class="form-control" name="Identidade['Marca_Identidade']" value="<?php echo $Identidade['Marca_Identidade']; ?>">
         </div>
 
 

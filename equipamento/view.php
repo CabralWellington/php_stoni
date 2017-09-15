@@ -1,5 +1,5 @@
 <?php
-require_once('../equipamento/functions.php');
+require_once('functions.php');
 editEquipamento2();
 ?>
 

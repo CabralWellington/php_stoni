@@ -17,7 +17,7 @@
                         <i class="fa fa-file-code-o fa-5x"></i>
                     </div>
                     <div class="col-xs-12 text-center">
-                        <p>Equipamento suportado</p>
+                        <p>OID suportado</p>
                     </div>
                 </div>
             </a>
@@ -29,7 +29,7 @@
                         <i class="fa fa-user-plus fa-5x"></i>
                     </div>
                     <div class="col-xs-12 text-center">
-                        <p>Identidate</p>
+                        <p>Identidade</p>
                     </div>
                 </div>
             </a>
@@ -55,6 +55,31 @@
                     </div>
                     <div class="col-xs-12 text-center">
                         <p>Relatórios</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+            <a href="equipamento/" class="btn btn-default">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <i class="fa fa-money fa-5x"></i>
+                    </div>
+                    <div class="col-xs-12 text-center">
+                        <p>Perfil de preço</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-xs-6 col-sm-3 col-md-2">
+            <a href="equipamento/" class="btn btn-default">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <i class="fa fa-w fa-5x"></i>
+                    </div>
+                    <div class="col-xs-12 text-center">
+                        <p>Perfil de preço</p>
                     </div>
                 </div>
             </a>

@@ -73,3 +73,23 @@ function updateORdelete($query = null) {
 
     close_database($database);
 }
+
+
+function login(){
+    session_start();
+    $login = $_POST['login'];
+    $password = $_POST['password'];
+    
+    if((isset($login)) and isset($password)){
+        $_SESSION['teste'] = 123;
+        header("Location: index.php");
+        
+    }
+}
+
+function logout(){
+    session_destroy();
+    header("Location: index.php");
+        
+    
+}

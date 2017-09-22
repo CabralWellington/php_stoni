@@ -32,6 +32,6 @@ if (!defined('DBAPI')) {
 define('HEADER_TEMPLATE', ABSPATH . 'header.php');
 define('FOOTER_TEMPLATE', ABSPATH . 'footer.php');
 define('LOGIN_TEMPLATE',  ABSPATH .'functionslogin.php');
-define('LOGIN_SITE',  'http://localhost/login.php');
-define('USER_SITE',  'http://localhost/view/equipamento/');
-define('SITE',  'http://localhost/');
+define('LOGIN_SITE',  'http://doztecnologia.com.br/login.php');
+define('USER_SITE',  'http://doztecnologia.com.br/view/equipamento/');
+define('SITE',  'http://doztecnologia.com.br/');

@@ -22,6 +22,7 @@ if (!defined('BASEURL')) {
     define('BASEURL', '/');
 }
 
+
 /** caminho do arquivo de banco de dados * */
 if (!defined('DBAPI')) {
     define('DBAPI', ABSPATH . 'database.php');
@@ -30,3 +31,7 @@ if (!defined('DBAPI')) {
 /** caminhos dos templates de header e footer **/
 define('HEADER_TEMPLATE', ABSPATH . 'header.php');
 define('FOOTER_TEMPLATE', ABSPATH . 'footer.php');
+define('LOGIN_TEMPLATE',  ABSPATH .'functionslogin.php');
+define('LOGIN_SITE',  'http://localhost/login.php');
+define('USER_SITE',  'http://localhost/view/equipamento/');
+define('SITE',  'http://localhost/');

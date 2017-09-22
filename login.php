@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<?php require_once 'inc/config.php'; ?>
-<?php
-require_once DBAPI;
-    login();
+<?php require_once 'inc/config.php'; 
+session_start();
+    if (isset($_SESSION['id'])) {
+        header('location:' . SITE);
+    }
+
 ?>
 
 <html>
@@ -36,20 +38,20 @@ require_once DBAPI;
                     <div class="col-md-4 col-md-offset-4">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Please sign in</h3>
+                                <h3 class="panel-title">Digite sua senha</h3>
                             </div>
                             <div class="panel-body">
-                                <form accept-charset="UTF-8" action="login.php" method="POST">
+                                <form accept-charset="UTF-8" action="inc/functionslogin.php" method="POST">
                                     <fieldset>
                                         <div class="form-group">
-                                            <input class="form-control"  name="login" type="text">
+                                            <input class="form-control" Placeholder="Usuário"  name="login" type="text">
                                         </div>
                                         <div class="form-group">
-                                            <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                            <input class="form-control" Placeholder="Senha" name="password" type="password" value="">
                                         </div>
                                         <div class="checkbox">
                                             <label>
-                                                <input name="remember" type="checkbox" value="Remember Me"> Remember Me
+                                                <input name="remember" type="checkbox" value="Remember Me"> Lembre-me!
                                             </label>
                                         </div>
                                         <input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
@@ -74,7 +76,7 @@ require_once DBAPI;
                             .5,
                             {css:
                                         {
-                                            backgroundPosition: "" + parseInt(event.pageX / 8) + "px " + parseInt(event.pageY / '12') + "px, " + parseInt(event.pageX / '15') + "px " + parseInt(event.pageY / '15') + "px, " + parseInt(event.pageX / '30') + "px " + parseInt(event.pageY / '30') + "px"
+                                            backgroundPosition: "" + parseInt(event.pageX / 9) + "px " + parseInt(event.pageY / '12') + "px, " + parseInt(event.pageX / '15') + "px " + parseInt(event.pageY / '15') + "px, " + parseInt(event.pageX / '30') + "px " + parseInt(event.pageY / '30') + "px"
                                         }
                             });
                 });

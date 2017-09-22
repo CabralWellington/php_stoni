@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+<?php require_once LOGIN_TEMPLATE;
+?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -62,7 +64,7 @@
                 <div id="navbar" class="navbar-collapse pull-right">
                     <ul class="nav navbar-nav">          
                         <li class="" align='right'>
-                            <a href="<?php echo BASEURL; ?>?exit=1" class="btn btn-sm">
+                            <a href="<?php echo BASEURL; ?>inc/functionslogin.php?exit=1" class="btn btn-sm">
 				<i class="fa fa-exchange"></i> Sair
 			</a></li>
                     </ul>

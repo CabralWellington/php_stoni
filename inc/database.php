@@ -55,7 +55,6 @@ function save($table = null, $data = null) {
     close_database($database);
 }
 
-
 function updateORdelete($query = null) {
 
     $database = open_database();
@@ -74,22 +73,19 @@ function updateORdelete($query = null) {
     close_database($database);
 }
 
-
-function login(){
-    session_start();
-    $login = $_POST['login'];
-    $password = $_POST['password'];
-    
-    if((isset($login)) and isset($password)){
-        $_SESSION['teste'] = 123;
-        header("Location: index.php");
-        
+function findLogin($sql) {
+    $database = open_database();
+    try {
+        $result = $database->query($sql);
+        if ($result->num_rows > 0) {
+            $found = $result->fetch_assoc();
+        }
+    } catch (Exception $e) {
+        $_SESSION['message'] = $e->GetMessage();
+        $_SESSION['type'] = 'danger';
     }
+
+    close_database($database);
+    return $found;
 }
 
-function logout(){
-    session_destroy();
-    header("Location: index.php");
-        
-    
-}
